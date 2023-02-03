@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
 import { api } from "../../utils/api";
+
+//images
+import logo from "../../assets/banner/MiniLogoVerde.png"
+
+//styles
 import "./home.css"
 
 const Home = () => {
@@ -8,11 +13,9 @@ const Home = () => {
     const [search, setSearch] = useState("")
 
     // listar todas as plantas
-    const listPlants = () => {
-        api.get("/")
-            .then(({ data }) => {
-                setPlants(data)
-            })
+    const listPlants = async () => {
+        const res = await api.get(`/search?nome=${search}`)
+        setPlants(res.data)
     }
 
     const searchPlants = (e) => {
@@ -21,32 +24,31 @@ const Home = () => {
 
     useEffect(() => {
         listPlants()
-        // eslint-disable-next-line
-    }, [])
+    }, [search])
 
     return (
         <div className="container">
-            <input
-                type="text"
-                placeholder="Digite o nome"
-                onChange={searchPlants}
-            />
-            {plants
-            .filter(plant =>{
-                if(search === "") return plant;
-                else if(plant.nomePopular.toLowerCase().includes(search)) return plant;
-            })
-            .map((plant, index) => (
-                        <div key={index}>
-                            <div className="positionLayuot">
-                                <img className="imagemPlantas" src={plant.images[0].url} alt={plant.nomePopular} />
-                                <h1 className="title">
-                                    {JSON.stringify(plant.nomePopular).toLowerCase().replace(/["]/g, '')}
-                                </h1>
-                            </div>
-                            <hr />
-                        </div>
-                ))}
+            <div className="bannerPosition">
+                <img src={logo} alt="logo" />
+            </div>
+            <div className="searchPosition">
+                <input
+                    type="text"
+                    placeholder="Digite o nome"
+                    onChange={searchPlants}
+                />
+            </div>
+            {plants.map((plant, index) => (
+                <div key={index}>
+                    <div className="positionLayuot">
+                        <img className="imagemPlantas" src={plant.images[0].url} alt={plant.nomePopular} />
+                        <h1 className="title">
+                            {JSON.stringify(plant.nomePopular).toLowerCase().replace(/["]/g, '')}
+                        </h1>
+                    </div>
+                    <hr />
+                </div>
+            ))}
         </div>
     )
 }
