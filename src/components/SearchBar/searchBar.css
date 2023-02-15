@@ -1,0 +1,26 @@
+/* estilização da barra de busca */
+@media screen and (max-width: 600px){
+    /* Estilizando a procurar */
+    .searchPosition{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+        outline: none;
+    }
+
+    .estiloSearch{
+        width: 16rem;
+        height: 1.5rem;
+        background-color: #F0F0F0;
+
+        border: none; 
+        border-width: 0; 
+        box-shadow: none;
+    }
+    
+    .estileLupa{
+        width: 1.5rem;
+        height: 1.5rem;
+        color: #108670;
+    }
+}

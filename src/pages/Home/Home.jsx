@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { api } from "../../utils/api";
 
+//Components
+import SearchBar from "../../components/SearchBar/SearchBar";
+
 //images
 import logo from "../../assets/banner/MiniLogoVerde.png"
 
@@ -24,32 +27,29 @@ const Home = () => {
 
     useEffect(() => {
         listPlants()
+        // eslint-disable-next-line 
     }, [search])
 
     return (
-        <div className="container">
+        <>
             <div className="bannerPosition">
                 <img src={logo} alt="logo" />
             </div>
-            <div className="searchPosition">
-                <input
-                    type="text"
-                    placeholder="Digite o nome"
-                    onChange={searchPlants}
-                />
-            </div>
+
+            <SearchBar searchBar={searchPlants} />
+
             {plants.map((plant, index) => (
                 <div key={index}>
                     <div className="positionLayuot">
                         <img className="imagemPlantas" src={plant.images[0].url} alt={plant.nomePopular} />
                         <h1 className="title">
-                            {JSON.stringify(plant.nomePopular).toLowerCase().replace(/["]/g, '')}
+                            {plant.nomePopular.toLowerCase()}
                         </h1>
                     </div>
                     <hr />
                 </div>
             ))}
-        </div>
+        </>
     )
 }
 

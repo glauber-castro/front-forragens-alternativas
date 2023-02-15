@@ -1,28 +1,14 @@
 @media screen and (max-width: 600px){
-    .container{
-        display: flex;
-        flex-direction: column;
-
-        width: 600px;
-    }
 
     /* Estilização do banner */
     .bannerPosition{
-        text-align: center;
-        padding-bottom: 20px;
-        padding-top: 10px;
-
-        width: 50%;
-    }
-
-    /* estilização da barra de busca */
-    .searchPosition{
         display: flex;
         justify-content: center;
         padding-bottom: 20px;
+        padding-top: 10px;
 
-        width: 50%;
     }
+
 
     /* estilização do title  */
     .title{

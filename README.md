@@ -7,6 +7,5 @@ Mostra de uma maneira mais simples a
 Execute esses comandos:
 
 ### `npm install`
-### `npm start`
 
 
