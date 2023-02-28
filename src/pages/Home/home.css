@@ -9,35 +9,63 @@
 
     }
 
+    /* posicionamento dos items abaixo */
+    .positionLayuot{
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+    }
 
-    /* estilização do title  */
     .title{
         font-style: normal;
         font-family: 'sans-serif';
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 27px;
-
-        letter-spacing: -0.369089px;
+        font-weight: 300px;
+        font-size: 1.2rem;
+        line-height: 0.1rem;
 
         color: #554B4B;
     }
 
-    
-    .positionLayuot{
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+    /* estilização texto */
+    .subtitle{
+        font-style: normal;
+        font-family: 'Inter';
+        font-size: 0.9rem;
+        line-height: 1rem;
     }
 
-    
+    /* posição do nome popular e do nome cientifico */
+   .positionTitle{
+        width: 14rem;
+        display: flex;
+        flex-direction: column;
+        
+        text-align: left;
+
+        padding-left: 0.5rem;
+   }
+
+    .styleLink{
+        text-decoration: none;
+    }
+
+    /* estilização imagem */
     .imagemPlantas{
         width: 120px;
         height: 120px;
         object-fit: cover;
     }
 
-    
+    /* estilação do botão > */
+    .styleButtonRight{
+        display: flex;
+
+        width: 2rem;
+        height: 1.5rem;
+        color: #554B4B;
+    }
+
+    /* A linha */
     hr{
         width: 100%;
     }

@@ -9,7 +9,7 @@
     }
 
     .estiloSearch{
-        width: 16rem;
+        width: 15rem;
         height: 1.5rem;
         background-color: #F0F0F0;
 
@@ -19,8 +19,15 @@
     }
     
     .estileLupa{
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        color: #108670;
+        background-color: #F0F0F0;
+    }
+
+    .estileFilter{
+        width: 1.6rem;
+        height: 1.6rem;
         color: #108670;
     }
 }

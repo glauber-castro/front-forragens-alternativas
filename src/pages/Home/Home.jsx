@@ -9,6 +9,10 @@ import logo from "../../assets/banner/MiniLogoVerde.png"
 
 //styles
 import "./home.css"
+import { Link } from "react-router-dom";
+
+//icons
+import { BiChevronRight } from "react-icons/bi"
 
 const Home = () => {
 
@@ -42,9 +46,13 @@ const Home = () => {
                 <div key={index}>
                     <div className="positionLayuot">
                         <img className="imagemPlantas" src={plant.images[0].url} alt={plant.nomePopular} />
-                        <h1 className="title">
-                            {plant.nomePopular.toLowerCase()}
-                        </h1>
+                        <div className="positionTitle">
+                            <Link to={`/planta/${plant.nomePopular}`} className="styleLink">
+                                <h1 className="title">{plant.nomePopular}</h1>
+                            </Link>
+                            <h2 className="subtitle">{plant.nomeCientifico}</h2>
+                        </div>
+                        <BiChevronRight className="styleButtonRight" />
                     </div>
                     <hr />
                 </div>
