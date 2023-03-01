@@ -1,9 +1,28 @@
+@media screen and (max-width: 600px){
+    .imagemPosition{
+        padding-bottom: 1rem;
+    }
 
+    .cabecalhoSingle{
+        display:flex;
+        align-items: center;
 
-.carroselPosition1{
-   
-}
+        gap: 1rem;
+    }
 
-.imagemPosition{
-    padding-bottom: 1rem;
+    .positionItems{
+        width: 15rem;
+    }
+
+    .singleTitle{
+        font-size: px;
+    }
+
+    .styleButtonClose{
+        padding-left: 5rem;
+        width: 2rem;
+        height: 1.5rem;
+
+        color: #554B4B;
+    }
 }
