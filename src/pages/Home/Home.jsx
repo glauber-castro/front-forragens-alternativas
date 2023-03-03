@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import { api } from "../../utils/api";
 
 //Components
@@ -31,7 +31,7 @@ const Home = () => {
 
     useEffect(() => {
         listPlants()
-        // eslint-disable-next-line 
+        // eslint-disable-next-line
     }, [search])
 
     return (
@@ -61,4 +61,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default memo(Home);

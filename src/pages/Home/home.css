@@ -21,9 +21,9 @@
         font-family: 'sans-serif';
         font-weight: 300px;
         font-size: 1.2rem;
-        line-height: 0.1rem;
 
         color: #554B4B;
+        line-height: 0.4rem;
     }
 
     /* estilização texto */
@@ -31,7 +31,6 @@
         font-style: normal;
         font-family: 'Inter';
         font-size: 0.9rem;
-        line-height: 1rem;
     }
 
     /* posição do nome popular e do nome cientifico */

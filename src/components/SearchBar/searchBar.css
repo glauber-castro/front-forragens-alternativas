@@ -4,7 +4,7 @@
     .searchPosition{
         display: flex;
         justify-content: center;
-        padding-bottom: 20px;
+        padding-bottom: 2rem;
         outline: none;
     }
 

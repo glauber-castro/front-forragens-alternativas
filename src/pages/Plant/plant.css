@@ -1,28 +1,47 @@
 @media screen and (max-width: 600px){
-    .imagemPosition{
+    /* Estilo do Cabeçalho */
+    .cabecalhoSingle{
+        width: 600px;
+        display: flex;
+        align-items: center;
         padding-bottom: 1rem;
     }
 
-    .cabecalhoSingle{
-        display:flex;
-        align-items: center;
-
-        gap: 1rem;
+    .imagemPosition:{
+        padding-bottom: 2rem;
     }
 
-    .positionItems{
-        width: 15rem;
+    .imagemCabecalho{
+        width: 2rem;
     }
 
     .singleTitle{
-        font-size: px;
+        padding-left: 1rem;
+
+        font-size: 1.2rem;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 900; 
     }
 
     .styleButtonClose{
-        padding-left: 5rem;
+        padding-left: 4rem;
         width: 2rem;
         height: 1.5rem;
 
         color: #554B4B;
     }
+
+    /* estilização do slide 1 */
+    .carroselPosition1{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+    }
+
+    .imagemPosition{
+        padding-bottom: 1rem;
+        object-fit: cover;
+    }
 }
+
